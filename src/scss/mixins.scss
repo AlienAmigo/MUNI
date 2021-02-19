@@ -1,0 +1,11 @@
+@mixin pseudo {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

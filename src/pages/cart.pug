@@ -1,0 +1,33 @@
+extends ../pug/layout.pug
+
+block meta
+  include ../pug/data.pug
+  title #{myPageTitle} Мой заказ
+
+block main
+  <h1 class="page__title cart__title">Мой заказ</h1>
+  <form method="POST" class="cart">
+    <div class="cart-list">
+      <div class="cart-item">
+        <div class="cart-item__img-wrapper">
+          <img src="img/cart-01.png" alt="Нежность в деталях (базовый комплект)">
+        </div>
+        <div class="cart-item__desc">
+          <div class="cart-item__title">Нежность в деталях (базовый&nbsp;комплект)</div>
+          <label for="" class="cart-item__qty">
+            <div class="cart-item__qty-title">количество<span class="hide-mobile">&nbsp;столов</span></div>
+            <input type="number" class="cart-item__qty-input"></input>
+          </label>
+          <div class="cart-item__price">5&thinsp;800&nbsp;₽</div>
+          <button class="btn btn--delete cart-item__del-button">Удалить</button>
+        </div>
+      </div>
+    </div>
+    <div class="cart__result">
+      <div class="cart__total-price"><span>Итого&thinsp;:</span>5&thinsp;800&nbsp;₽</div>
+      <input type="submit" class="btn btn--secondary cart__submit-button" value="Оформить заказ">
+    </div>
+  </form>
+  <div class="wrapper">
+    <a href="#" class="btn btn--delete cart__back-to-catalog-btn">Вернуться в каталог</a>
+  </div>

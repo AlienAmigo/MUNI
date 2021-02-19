@@ -1,0 +1,113 @@
+//- Стандартный шаблон страницы
+include mixins.pug
+
+doctype html
+html(class='page  no-js', lang='ru')
+  include data.pug
+
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name="format-detection" content="telephone=no")
+    link(rel="preload" href="fonts/subset-Montserrat-Regular.woff2" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/subset-Cormorant-Bold.woff2" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/subset-Roboto-Regular.woff2" as="font" crossorigin="anonymous")
+    link(rel="stylesheet" href="css/style.css")
+    script(src="js/script.min.js" async)
+    block meta
+      title #{myPageTitle}
+
+    block head
+      script.
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+
+    header.page-header
+      .page-header__wrapper
+        a.page-header__logo(href=``)
+          img.page-header__logo-image(src="img/Logo.svg" alt="MUNI лого")
+
+        nav.main-nav.main-nav--reverse.main-nav--closed.main-nav--nojs
+          <ul class="main-nav__list">
+            <li class="main-nav__list-item main-nav__list-item--active">
+              <a>Главная</a>
+            </li>
+            <li class="main-nav__list-item">
+              <a href="catalog.html">Каталог</a>
+            </li>
+            <li class="main-nav__list-item">
+              <a href="#">Свадебная полиграфия</a>
+            </li>
+          </ul>
+
+        <div class="page-header__contacts">
+          <a href="tel:+79992077407" class="page-header__phone">
+            <span class="hide-mobile">8&nbsp;</span>999&nbsp;207&nbsp;74&nbsp;07
+          </a>
+          <a href="https://instagram.com/munidecor " class="page-header__insta">
+            <span class="visually-hidden">MUNI в Instagram</span>
+            <svg width="12" height="12">
+              <use xlink:href="#icon-instagram"></use>
+            </svg>
+          </a>
+        </div>
+
+        <a href="#" class="btn btn--reverse page-header__order">Мой заказ
+        </a>
+
+        <button class="page-header__nav-toggle page-header__nav-toggle--closed page-header__nav-toggle--nojs" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+
+    main.page-main
+      block main
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__links">
+          <a class="page-footer__logo">
+            <img class="page-footer__logo-image" src="img/logo.svg" alt="MUNI лого">
+          </a>
+          <nav class="page-footer__nav hide-mobile">
+            <ul class="main-nav__list">
+              <li class="main-nav__list-item main-nav__list-item--active">
+                <a>Главная</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a href="catalog.html">Каталог</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a href="#">Свадебная полиграфия</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="page-footer__copyright hide-mobile">&copy;&nbsp;2020</div>
+        </div>
+        <div class="page-footer__contacts">
+          <div class="page-footer__contacts-first">
+            <a href="tel:+79992077407" class="page-footer__phone">8&nbsp;&nbsp;999&nbsp;&nbsp;207&nbsp;&nbsp;74&nbsp;&nbsp;07
+            </a>
+            <a href="https://instagram.com/munidecor " class="page-footer__link page-footer__insta">
+              <span class="visually-hidden">MUNI в Instagram</span>
+              <svg class="page-footer__image page-footer__image--insta" width="12" height="12">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="page-footer__email">
+            <a href="mailto:muni.decor@gmail.com" class="social__link social__link--email">
+              <svg class="contacts__image contacts__image--fb" width="10" height="19">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+              <span>muni.decor@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    script(src='js/script.min.js' async)
