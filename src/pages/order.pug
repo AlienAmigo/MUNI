@@ -1,0 +1,34 @@
+extends ../pug/layout.pug
+
+block meta
+  title #{myPageTitle} Оформление заказа
+
+block main
+  h1.page__title.offer__title Оформление заказа
+  <div class="offer">
+    <form method="POST" class="offer-form">
+      <div class="offer-form__subhead">Контактные данные</div>
+      <input class="offer-form__input offer-form__input--name" name="offer-name" type="text" placeholder="Имя"/>
+      <input class="offer-form__input offer-form__input--phone" name="offer-phone" type="phone" placeholder="Телефон"/>
+      <div class="offer-form__subhead">Мероприятие</div>
+      <input class="offer-form__input offer-form__input--adress" name="offer-address" type="address" placeholder="Адрес проведения"/>
+      <div class="offer-form-date-input">
+        <div class="offer-form-date-input__label">Дата:</div>
+        <input type="text" name="offer-date-day" class="offer-form-date-input__input" maxlength="2">
+        <input type="text" name="offer-date-month" class="offer-form-date-input__input" maxlength="2">
+        <input type="text" name="offer-date--year" class="offer-form-date-input__input" maxlength="4">
+      </div>
+      <input class="btn btn--secondary offer-form__submit-btn" type="submit" value="Оформить заказ" id="place-order-btn"/>
+    </form>
+    <div class="offer-summ">
+      <div class="offer-summ__title">Ваш заказ:</div>
+      <div class="offer-summ__offer-list">
+        <div class="offer-summ-item">
+          <div class="offer-summ-item__title">Нежность в деталях (базовый комплект)</div>
+          <div class="offer-summ-item__qty">1</div>
+          <div class="offer-summ-item__price">5&thinsp;800&nbsp;₽</div>
+        </div>
+        <div class="offer-summ-total"><span class="offer-summ-total__text">Итого&thinsp;:</span><span class="span offer-summ-total__value">5&thinsp;800&nbsp;₽</span></div>
+      </div>
+    </div>
+  </div>

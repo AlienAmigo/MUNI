@@ -9,3 +9,11 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+@mixin hover {
+  transition: opacity 0.35s ease-in;
+
+  &:hover {
+    opacity: 0.65;
+  }
+}

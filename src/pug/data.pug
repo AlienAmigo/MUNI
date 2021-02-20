@@ -1,5 +1,13 @@
 -
-  //- let siteRoot – нужен только для корректного отображения на gitPages, при необходимости заменить на '/', и проект пересоберётся с относительным путём;
+  //- let siteRoot ='/';
   let siteRoot = 'https://alienamigo.github.io/MUNI/';
+  //- нужен только для корректного sотображения на gitPages, при необходимости заменить на '/', и проект пересоберётся с относительным путём;
 
   const myPageTitle = "MUNI - студия декора событий | ";
+
+  const routes = {
+    root: siteRoot,
+    order: `${siteRoot}order.html`,
+    catalog: `${siteRoot}catalog.html`,
+    poligraph: `${siteRoot}poligraph.html`,
+  }

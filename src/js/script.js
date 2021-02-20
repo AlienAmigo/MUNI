@@ -90,6 +90,7 @@ ready(() => {
         this.trigger.removeEventListener('click', this.open);
         this.trigger = null;
       }
+
     };
 
   popupLibrary.init();
@@ -107,7 +108,7 @@ ready(() => {
         <div class="success-order__title">Спасибо за заказ !</div>
         <div class="success-order__text">Наш менеджер свяжется с&nbsp;вами для&nbsp;уточнения деталей</div>
       </div>
-      <img src="img/success-order-popup.webp" alt="Спасибо за заказ!" class="success-order__img">
+      <img src="img/success-order-popup.png" alt="Спасибо за заказ!" class="success-order__img">
     </div>
     `;
 

@@ -6,84 +6,132 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 12px;
-    padding-bottom: 20px;
+    align-items: flex-start;
+    padding: 0 0 20px;
   }
-}
 
-.page-footer__nav {
-  display: none;
-}
+  &__logo {
+    width: 42px;
+    height: 42px;
+    margin-top: 2px;
+    outline: 0;
+  }
 
-.page-footer__logo {
-  margin-left: -5px;
-}
+  &__left-block {
+    display: flex;
+    flex-direction: column;
+  }
 
-.page-footer__logo-image {
-  margin-top: -14px;
-  width: 42px;
-  height: 42px;
-}
-
-.page-footer__contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.page-footer__contacts-first {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.page-footer__phone,
-.page-footer__email {
-  font-family: $links-font;
-  color: $grey-text-color;
-  font-size: 0.75rem;
-  line-height: 1.2rem;
-}
-
-.page-footer__insta {
-  margin-left: 8px;
-  display: flex;
-  align-items: center;
-}
-
-@media (min-width: $tablet-width) {
-  .page-footer__wrapper {
-    padding-top: 0;
-    padding-bottom: 33px;
+  &__contacts {
+    display: flex;
+    flex-direction: column;
     align-items: flex-end;
+
+
+    &-first {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
 
-  .page-footer__logo-image {
-    margin-top: 0;
-    width: 58px;
-    height: 58px;
-    margin-left: -2px;
+  &__instagram {
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    background: url('../img/icon-instagram.svg') no-repeat center center / 100% 100%;
+    outline: 0;
   }
 
-  .page-footer__phone,
-  .page-footer__email {
-    font-size: 0.875rem;
-    line-height: 1rem;
-  }
-
-  .page-footer__contacts-first {
-    margin-bottom: 14px;
-  }
-
-  .page-footer__image--insta {
-    width: 16px;
-    height: 16px;
-  }
-
-  .page-footer__copyright {
-    font-family: $links-font;
-    font-size: 0.875rem;
-    line-height: 0.94rem;
-  }
 }
+// .page-footer {
+//   width: 100%;
+
+//   &__wrapper {
+//     @extend .wrapper;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding-top: 12px;
+//     padding-bottom: 20px;
+//   }
+// }
+
+// .page-footer__nav {
+//   display: none;
+// }
+
+// .page-footer__logo {
+//   margin-left: -5px;
+// }
+
+// .page-footer__logo-image {
+//   margin-top: -14px;
+//   width: 42px;
+//   height: 42px;
+// }
+
+// .page-footer__contacts {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+// }
+
+// .page-footer__contacts-first {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+// }
+
+// .page-footer__phone,
+// .page-footer__email {
+//   font-family: $links-font;
+//   color: $grey-text-color;
+//   font-size: 0.75rem;
+//   line-height: 1.2rem;
+// }
+
+// .page-footer__insta {
+//   margin-left: 8px;
+//   display: flex;
+//   align-items: center;
+// }
+
+// @media (min-width: $tablet-width) {
+//   .page-footer__wrapper {
+//     padding-top: 0;
+//     padding-bottom: 33px;
+//     align-items: flex-end;
+//   }
+
+//   .page-footer__logo-image {
+//     margin-top: 0;
+//     width: 58px;
+//     height: 58px;
+//     margin-left: -2px;
+//   }
+
+//   .page-footer__phone,
+//   .page-footer__email {
+//     font-size: 0.875rem;
+//     line-height: 1rem;
+//   }
+
+//   .page-footer__contacts-first {
+//     margin-bottom: 14px;
+//   }
+
+//   .page-footer__image--insta {
+//     width: 16px;
+//     height: 16px;
+//   }
+
+//   .page-footer__copyright {
+//     font-family: $links-font;
+//     font-size: 0.875rem;
+//     line-height: 0.94rem;
+//   }
+// }
