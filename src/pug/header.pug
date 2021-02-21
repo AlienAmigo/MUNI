@@ -3,14 +3,7 @@ header.page-header
     a.page-header__logo(href=`${siteRoot}`)
       img.page-header__logo-image(src="img/Logo.svg" alt="MUNI лого")
 
-    nav.main-nav.main-nav--reverse.main-nav--closed.main-nav--nojs
-      ul.main-nav__list
-        li.main-nav__list-item.main-nav__list-item--active
-          a(href=`${routes.root}`) Главная
-        li.main-nav__list-item
-          a(href=`${routes.catalog}`) Каталог
-        li.main-nav__list-item
-          a(href=`${routes.poligraph}`) Свадебная полиграфия
+    include main-nav.pug
 
     .page-header__contacts
       a.page-header__phone(href="tel:+79992077407")
@@ -25,6 +18,6 @@ header.page-header
 
     a.btn.btn--reverse.page-header__order(href=`${routes.order}`) Мой заказ
 
-    <button class="page-header__nav-toggle page-header__nav-toggle--closed page-header__nav-toggle--nojs" type="button">
+    <button class="page-header__nav-toggle page-header__nav-toggle--nojs" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>

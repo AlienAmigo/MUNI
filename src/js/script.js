@@ -9,28 +9,7 @@ function ready(fn) {
 }
 
 ready(() => {
-  const navMain = document.querySelector('.main-nav');
-  const navToggle = document.querySelector('.page-header__nav-toggle');
-
-  if (navMain && navToggle) {
-    navMain.classList.remove('main-nav--nojs');
-    navToggle.classList.remove('page-header__nav-toggle--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-        navToggle.classList.remove('page-header__nav-toggle--closed');
-        navToggle.classList.add('page-header__nav-toggle--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-        navToggle.classList.add('page-header__nav-toggle--closed');
-        navToggle.classList.remove('page-header__nav-toggle--opened');
-      }
-    });
-  }
-
+ 
   // библиотека popup
     const popupLibrary = {
       popUp: null,
@@ -121,6 +100,29 @@ ready(() => {
     if (placeOrderButton) {
       placeOrderButton.addEventListener('click', successPopup);
     }
+  }
+
+  // ГЛАВНОЕ МЕНЮ
+  const myMainNav = document.querySelector('.main-nav');
+  const myMainNavCloseBtn = document.querySelector('.main-nav__close-btn');
+  const myMainNavBtn = document.querySelector('.page-header__nav-toggle');
+
+  if (myMainNav && myMainNavCloseBtn && myMainNavBtn) {
+    myMainNav.addEventListener('click', e => {
+      e.stopPropagation();
+    });
+
+    myMainNavBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      myMainNav.classList.toggle('main-nav--active', true);
+    });
+
+    myMainNavCloseBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      myMainNav.classList.toggle('main-nav--active', false);
+    });
+
+    const myMainNavItems = document.querySelector('.main-nav__list-item');
   }
 }
 );

@@ -14,6 +14,7 @@
   &__logo {
     width: 42px;
     height: 42px;
+    @include hover;
 
     &-image {
       width: 100%;
@@ -39,7 +40,7 @@
     align-items: center;
     flex-wrap: wrap;
     flex: 1;
-    }
+  }
 
   &__phone {
     min-width: max-content;
@@ -47,6 +48,7 @@
     color: $grey-text-color;
     font-size: 0.75rem;
     line-height: 0.91rem;
+    @include hover;
 
     span.hide-mobile {
       display: none;

@@ -4,20 +4,11 @@ footer.page-footer
     .page-footer__left-block
       a.page-footer__logo(href=`${routes.root}`)
         img.page-footer__logo-image(src="img/logo.svg" alt="MUNI лого")
-      //- <nav class="page-footer__nav hide-mobile">
-      //-   <ul class="main-nav__list">
-      //-     <li class="main-nav__list-item main-nav__list-item--active">
-      //-       <a>Главная</a>
-      //-     </li>
-      //-     <li class="main-nav__list-item">
-      //-       <a href="catalog.html">Каталог</a>
-      //-     </li>
-      //-     <li class="main-nav__list-item">
-      //-       <a href="#">Свадебная полиграфия</a>
-      //-     </li>
-      //-   </ul>
-      //- </nav>
       .page-footer__copyright.hide-mobile &copy;&ensp;2020
+
+    .page-footer__navigation
+      include main-nav.pug
+
     .page-footer__contacts
       .page-footer__contacts-first
         a.page-footer__phone(href="tel:+79992077407") 8&ensp;999&ensp;207&ensp;74&ensp;07

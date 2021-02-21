@@ -19,6 +19,7 @@
     height: 42px;
     margin-top: 2px;
     outline: 0;
+    @include hover;
 
     &-image {
       width: 100%;
@@ -31,6 +32,13 @@
   &__left-block {
     display: flex;
     flex-direction: column;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
   }
 
   &__contacts {
@@ -52,6 +60,7 @@
     font-size: 0.75rem;
     font-family: $links-font;
     color: $grey-text-color;
+    @include hover;
   }
 
   &__instagram {
@@ -70,6 +79,7 @@
     line-height: 1.25rem;
     font-family: $links-font;
     color: $grey-text-color;
+    @include hover;
   }
 }
 
@@ -92,6 +102,11 @@
       font-family: $links-font;
       color: $grey-text-color;
     }
+
+    &__navigation {
+      margin: 20px 0 0;
+    }
+
 
     &__contacts {
       margin-top: 20px;
@@ -131,6 +146,15 @@
       margin-top: 26px;
       font-size: 1.125rem;
       line-height: 1.5625rem;
+    }
+
+    &__navigation {
+      margin: 35px 0 0;
+
+      .main-nav__list-item {
+        font-size: 1rem;
+        line-height: 1rem;
+      }
     }
 
     &__contacts {
