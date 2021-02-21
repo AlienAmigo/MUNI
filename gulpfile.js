@@ -89,7 +89,7 @@ function copyJsVendors() {
 }
 
 function copyImages() {
-  return src(dir.src + 'img/*.{jpg,jpeg,png,svg,webp,gif}')
+  return src(dir.src + 'img/**/*.{jpg,jpeg,png,svg,webp,gif,webmanifest}')
     .pipe(dest(dir.build + 'img/'));
 }
 exports.copyImages = copyImages;
