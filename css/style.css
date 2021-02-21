@@ -3339,7 +3339,8 @@ button {
     .main-nav__list-item {
       font-family: Montserrat;
       font-size: 1rem;
-      line-height: 1rem; }
+      line-height: 1rem;
+      color: #494948; }
       .main-nav__list-item:not(:first-of-type) {
         margin-top: 17px; }
       .main-nav__list-item:hover {
