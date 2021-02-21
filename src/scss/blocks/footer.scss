@@ -1,5 +1,6 @@
 .page-footer {
   width: 100%;
+  border: 1px solid #CAC7C7;
 
   &__wrapper {
     @extend .wrapper;
@@ -11,10 +12,20 @@
   }
 
   &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 42px;
     height: 42px;
     margin-top: 2px;
     outline: 0;
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center center;
+    }
   }
 
   &__left-block {
@@ -26,6 +37,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-top: 15px;
 
 
     &-first {
@@ -36,6 +48,12 @@
     }
   }
 
+  &__phone {
+    font-size: 0.75rem;
+    font-family: $links-font;
+    color: $grey-text-color;
+  }
+
   &__instagram {
     display: inline-flex;
     width: 12px;
@@ -43,95 +61,101 @@
     margin-left: 8px;
     background: url('../img/icon-instagram.svg') no-repeat center center / 100% 100%;
     outline: 0;
+    @include hover;
   }
 
+  &__email {
+    margin-top: 6px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-family: $links-font;
+    color: $grey-text-color;
+  }
 }
-// .page-footer {
-//   width: 100%;
 
-//   &__wrapper {
-//     @extend .wrapper;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: center;
-//     padding-top: 12px;
-//     padding-bottom: 20px;
-//   }
-// }
+@media (min-width: $tablet-width) {
+  .page-footer {
+    &__wrapper {
+      padding: 0 0 33px;
+    }
 
-// .page-footer__nav {
-//   display: none;
-// }
+    &__logo {
+      width: 58px;
+      height: 58px;
+      margin-top: 0;
+    }
 
-// .page-footer__logo {
-//   margin-left: -5px;
-// }
+    &__copyright {
+      margin: 4px 0 0;
+      font-size: 0.875rem;
+      line-height: 0.9375rem;
+      font-family: $links-font;
+      color: $grey-text-color;
+    }
 
-// .page-footer__logo-image {
-//   margin-top: -14px;
-//   width: 42px;
-//   height: 42px;
-// }
+    &__contacts {
+      margin-top: 20px;
+    }
 
-// .page-footer__contacts {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-end;
-// }
+    &__phone {
+      font-size: 0.875rem;
+      line-height: 1.5625rem;
+    }
 
-// .page-footer__contacts-first {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-// }
+    &__instagram {
+      width: 16px;
+      height: 16px;
+      margin-left: 1rem;
+    }
 
-// .page-footer__phone,
-// .page-footer__email {
-//   font-family: $links-font;
-//   color: $grey-text-color;
-//   font-size: 0.75rem;
-//   line-height: 1.2rem;
-// }
+    &__email {
+      margin-top: 8px;
+      font-size: 0.875rem;
+      line-height: 1.5625rem;
+    }
+  }
+}
 
-// .page-footer__insta {
-//   margin-left: 8px;
-//   display: flex;
-//   align-items: center;
-// }
+@media (min-width: $desktop-width) {
+  .page-footer {
+    &__wrapper {
+      padding: 20px 0 35px;
+    }
 
-// @media (min-width: $tablet-width) {
-//   .page-footer__wrapper {
-//     padding-top: 0;
-//     padding-bottom: 33px;
-//     align-items: flex-end;
-//   }
+    &__logo {
+      width: 87px;
+      height: 87px;
+    }
 
-//   .page-footer__logo-image {
-//     margin-top: 0;
-//     width: 58px;
-//     height: 58px;
-//     margin-left: -2px;
-//   }
+    &__copyright {
+      margin-top: 26px;
+      font-size: 1.125rem;
+      line-height: 1.5625rem;
+    }
 
-//   .page-footer__phone,
-//   .page-footer__email {
-//     font-size: 0.875rem;
-//     line-height: 1rem;
-//   }
+    &__contacts {
+      margin-top: 35px;
 
-//   .page-footer__contacts-first {
-//     margin-bottom: 14px;
-//   }
+      &-first {
+        align-items: baseline;
+      }
+    }
 
-//   .page-footer__image--insta {
-//     width: 16px;
-//     height: 16px;
-//   }
+    &__phone {
+      font-size: 1.125rem;
+      line-height: 1.5625rem;
+    }
 
-//   .page-footer__copyright {
-//     font-family: $links-font;
-//     font-size: 0.875rem;
-//     line-height: 0.94rem;
-//   }
-// }
+    &__instagram {
+      width: 22px;
+      height: 22px;
+      margin-left: 20px;
+    }
+
+    &__email {
+      margin-top: 10px;
+      font-size: 1.125rem;
+      line-height: 1.5625rem;
+    }
+  }
+}

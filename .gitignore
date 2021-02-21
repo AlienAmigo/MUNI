@@ -16,3 +16,4 @@ ex_files
 Thumbs.db
 __MACOSX/
 package-lock.json
+_design/

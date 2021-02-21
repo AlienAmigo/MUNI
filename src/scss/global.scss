@@ -31,8 +31,8 @@ input {
   outline: 0;
 }
 
-input[type="radio"],
-input[type="checkbox"],
+input[type='radio'],
+input[type='checkbox'],
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
