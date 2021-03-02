@@ -1,0 +1,138 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0 0;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0 36px;
+    background-color: $bg-main-color;
+  }
+
+  &__list-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__item {
+    padding-left: 25px;
+    font-family: $links-font;
+    color: $grey-text-color;
+    text-decoration: none;
+    font-size: 0.75rem;
+    line-height: 0.88rem;
+    background-repeat: no-repeat;
+    background-position-y: center;
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    @include hover;
+
+    &:hover,
+    &:visited,
+    &:active {
+      color: $grey-text-color;
+      text-decoration: none;
+    }
+
+    &--phone {
+      background-image: url('../img/icon-phone.svg');
+      background-size: 15px 15px;
+    }
+
+    &--instagram {
+      background-image: url('../img/icon-instagram.svg');
+      background-size: 15px 15px;
+    }
+
+    &--email {
+      background-image: url('../img/icon-email.svg');
+      background-size: 15px 15px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    margin-top: 100px;
+
+    &__title {
+      margin-bottom: 84px;
+    }
+
+    &__list {
+      padding: 45px 0;
+    }
+
+    &__list-wrapper {
+      @include wrapper;
+      padding-left: calc(((100% - 220px) / 12) * 3 + (20px * 3));
+    }
+
+    &__item {
+      padding-left: 40px;
+      font-family: $links-font;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+
+      &--phone {
+        background-size: 21px 21px;
+      }
+
+      &--instagram {
+        background-size: 21px 21px;
+      }
+
+      &--email {
+        background-size: 28px 21px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    &__title {
+      margin-bottom: 91px;
+    }
+
+    &__list {
+      padding: 117px 0 118px;
+    }
+
+    &__list-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    &__item {
+      padding-left: 60px;
+      font-size: 1.875rem;
+      line-height: 2.75rem;
+
+      &--phone {
+        background-size: 41px 41px;
+      }
+
+      &--instagram {
+        background-size: 31px 31px;
+      }
+
+      &--email {
+        padding-left: 70px;
+        background-size: 43px 31px;
+      }
+    }
+  }
+}

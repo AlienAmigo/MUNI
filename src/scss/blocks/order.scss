@@ -1,5 +1,5 @@
 .offer {
-  @extend .wrapper;
+  @include wrapper;
   margin-bottom: 39px;
 
   &__breadcrumbs {

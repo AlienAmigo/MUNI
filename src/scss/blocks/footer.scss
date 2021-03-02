@@ -3,7 +3,7 @@
   border: 1px solid #CAC7C7;
 
   &__wrapper {
-    @extend .wrapper;
+    @include wrapper;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

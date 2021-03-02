@@ -21,6 +21,15 @@ const prettyHtml = require('gulp-pretty-html');
 const replace = require('gulp-replace');
 const ghPages = require('gh-pages');
 const path = require('path');
+const gulp = require('gulp');
+const webp = require('gulp-webp');
+
+function convertImgToWEBP() {
+  return src(dir.src + 'img/**/*.{jpg,jpeg,png}')
+        .pipe(webp({quality: 90}))
+        .pipe(gulp.dest(dir.build + 'img/'))
+}
+exports.convertImgToWEBP = convertImgToWEBP;
 
 function compilePug() {
   return src(dir.src + 'pages/**/*.pug')
@@ -136,6 +145,6 @@ function serve() {
 
 exports.default = series(
   clean,
-  parallel(compileStyles, compilePug, processJs, copyJsVendors, copyImages, copyFonts),
+  parallel(compileStyles, compilePug, processJs, copyJsVendors, copyImages, convertImgToWEBP, copyFonts),
   serve
 );

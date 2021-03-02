@@ -23,18 +23,14 @@ $secondary-color: #5ab6bb;
 // Fonts
 
 $titles-font: 'Cormorant', Times, serif;
-$text-font: 'Roboto', Helvetica, sans-serif;
-$links-font: 'Montserrat', Helvetica, sans-serif;
+$text-font: 'Roboto', Helvetica, Arial, sans-serif;
+$links-font: 'Montserrat', Helvetica, Arial, sans-serif;
 
 // Breakpoints
-// $screen-xs:           480px;
-// $screen-sm:           768px;
-// $screen-md:           992px;
-// $screen-lg:           1200px;
-
 $tablet-width: 768px;
 $desktop-width: 1400px;
 
+//Grid
 $margin: 20px;
 $cols-1-12: calc((100% - 220px) / 12);
 $cols-2-12: calc((100% - 220px) / 12 * 2 + 20px);

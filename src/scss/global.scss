@@ -61,20 +61,7 @@ button {
 }
 
 .wrapper {
-  width: 90%;
-  min-width: 290px;
-  max-width: 668px;
-  margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    width: 87%;
-    max-width: 1000px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 84.5%;
-    max-width: 1500px;
-  }
+  @include wrapper;
 }
 
 @mixin wrapper-reset {

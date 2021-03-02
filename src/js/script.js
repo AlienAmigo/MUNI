@@ -9,7 +9,7 @@ function ready(fn) {
 }
 
 ready(() => {
- 
+
   // библиотека popup
     const popupLibrary = {
       popUp: null,
@@ -121,8 +121,6 @@ ready(() => {
       e.stopPropagation();
       myMainNav.classList.toggle('main-nav--active', false);
     });
-
-    const myMainNavItems = document.querySelector('.main-nav__list-item');
   }
 }
 );

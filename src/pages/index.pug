@@ -4,3 +4,30 @@ block meta
   title #{myPageTitle} Главная
 
 block main
+  section.promo
+    .promo__wrapper
+      h1.visually-hidden Студия декора событий MUNI
+      <p class="promo__title">Декор свадьбы<br />в&nbsp;один клик</p>
+      <p class="promo__description">Готовые авторские решения, разработанные лучшими флористами и&nbsp;дизайнерами</p>
+      a.btn.btn--primary.promo__btn(href=`${routes.catalog}`) Выбрать декор
+  section.about
+    .about__wrapper
+      .about__content
+        h2.page__title.about__title О нас
+        .about__description
+          p.about__description-text MUNI&nbsp;&mdash; это декор свадьбы в&nbsp;один клик.
+          p.about__description-text Мы&nbsp;предлагаем готовые концепции оформления праздника.
+          p.about__description-text Пакетные предложения (сеты) состоят из&nbsp;цветочных композиций и&nbsp;деталей сервировки в&nbsp;разных стилях.
+          p.about__description-text Концепции разработаны опытными флористами и&nbsp;декораторами, которые работают в&nbsp;командах лидеров event-сферы.
+      .about__img-wrapper
+        picture
+          source(media="(min-width: 1400px)", srcset="img/flowers.webp", type="image/webp")
+          source(media="(min-width: 768px)", srcset="/img/flowers-tablet.webp", type="image/webp")
+          img(src="img/flowers-tablet.png", alt="Букет цветов")
+  section.contacts
+    h2.page__title.contacts__title Контакты
+    .contacts__list
+      .contacts__list-wrapper
+        a.contacts__item.contacts__item--phone(href="tel:+79992077407") 8&ensp;999&ensp;207&ensp;74&ensp;07
+        a.contacts__item.contacts__item--instagram(href="https://instagram.com/munidecor") @munidecor
+        a.contacts__item.contacts__item--email(href="mailto:muni.decor@gmail.com") muni.decor@gmail.com

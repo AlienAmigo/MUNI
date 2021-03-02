@@ -1,0 +1,29 @@
+extends ../pug/layout.pug
+
+block meta
+  title #{myPageTitle} Свадебная полиграфия
+
+block main
+  h1.page__title.polygraphy__title Свадебная полиграфия
+  section.polygraphy-info
+    .polygraphy-info__picture
+      picture
+        source(media="(min-width: 1400px)", srcset="img/polygraphy-about-desktop.webp", type="image/webp")
+        source(media="(min-width: 768px)", srcset="img/polygraphy-about-tablet.webp", type="image/webp")
+        source(media="(min-width: 0)", srcset="img/polygraphy-about.webp", type="image/webp")
+        img(src="img/polygraphy-about-desktop.png", alt="Свадебная полиграфия")
+    .polygraphy-info__text-wrapper
+      p.polygraphy-info__text Готовый дизайн для&nbsp;Ваших пригласительных и&nbsp;остальной полиграфии
+      p.polygraphy-info__text Комплект&ensp;от&ensp;#[span.polygraphy-info__price 200&nbsp;#[span.polygraphy-info__ruble-symbol ₽]]
+      p.polygraphy-info__text Карточки&ensp;от&ensp;#[span.polygraphy-info__price 200&nbsp;#[span.polygraphy-info__ruble-symbol ₽]]
+  section.polygraphy__gallery
+    - for (let i = 1; i <= 7; i++ )
+      .polygraphy__gallery-item
+        picture
+          source(media="(min-width: 1400px)", srcset=`img/polygraphy-0${i}-desktop.webp`, type="image/webp")
+          source(media="(min-width: 768px)", srcset=`img/polygraphy-0${i}-tablet.webp`, type="image/webp")
+          source(media="(min-width: 0)", srcset=`img/polygraphy-0${i}.webp`, type="image/webp")
+          img(src=`img/polygraphy-0${i}.png`, alt=`"Свадебная полиграфия 0${i}"`)
+
+  section.polygraphy__call
+    p.polygraphy__call-text Закажите дизайн для&nbsp;вашей полиграфии и&nbsp;персональный расчет у&nbsp;наших менеджеров #[a.polygraphy__call-phone(href="tel:89992077407") 8&ensp;999&ensp;207&ensp;74&ensp;07]

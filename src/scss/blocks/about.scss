@@ -1,0 +1,129 @@
+.about {
+  margin: 40px 0 0;
+  padding-top: 0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    background-color: $bg-main-color;
+    padding: 41px 0 45px;
+
+    &-text {
+      @include wrapper();
+      margin-top: 0;
+      margin-bottom: 0;
+      font-family: $text-font;
+      color: $grey-text-color;
+      font-size: 0.75rem;
+      line-height: 0.94rem;
+    }
+  }
+
+  &__img-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    margin-top: 100px;
+    padding: 0;
+
+    &__wrapper {
+      @include wrapper;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+    }
+
+    &__content {
+      width: calc(((100% - 220px) / 12) * 7 + (20px * 7));
+    }
+
+    &__title {
+      margin-bottom: 53px;
+    }
+
+    &__description {
+      padding: 51px 40px 52px;
+
+      &-text {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: $links-font;
+        font-size: 0.875rem;
+        line-height: 143%;
+      }
+    }
+
+    &__img-wrapper {
+      display: flex;
+      width: calc(((100% - 220px) / 12) * 5 + (20px * 4) + ((100vw - 100%) / 2));
+      height: 421px;
+      margin-top: 23px;
+      margin-right: calc((100% - 100vw) / 2);
+
+      picture, img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+
+    &__image {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+
+    &__title {
+      margin-bottom: 88px;
+    }
+
+    &__content {
+      width: $cols-8-12;
+    }
+
+    &__description {
+      padding: 90px 69px 91px;
+
+      &-text {
+        font-size: 1.125rem;
+        line-height: 139%;
+      }
+    }
+
+    &__img-wrapper {
+      display: flex;
+      width: calc(((100% - 220px) / 12) * 4 + (20px * 4) + ((100vw - 100%) / 2));
+      height: 110%;
+      margin-top: 23px;
+      margin-right: calc((100% - 100vw) / 2);
+
+      picture, img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+
+    &__image {
+      display: block;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .breadcrumbs {
-  @extend .wrapper;
+  @include wrapper;
   display: none;
   width: 100%;
 }

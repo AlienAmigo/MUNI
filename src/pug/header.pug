@@ -1,7 +1,7 @@
 header.page-header
   .page-header__wrapper
-    a.page-header__logo(href=`${siteRoot}`)
-      img.page-header__logo-image(src=`${siteRoot}img/Logo.svg` alt="MUNI лого")
+    a.page-header__logo(href=`${routes.root}`)
+      img.page-header__logo-image(src=`${routes.root}img/Logo.svg` alt="MUNI лого")
 
     include main-nav.pug
 
@@ -11,9 +11,6 @@ header.page-header
       </a>
       <a href="https://instagram.com/munidecor " class="page-header__instagram" title="MUNI в Instagram">
         <span class="visually-hidden">MUNI в Instagram</span>
-        <svg width="12" height="12">
-          <use xlink:href="#icon-instagram"></use>
-        </svg>
       </a>
 
     a.btn.btn--reverse.page-header__order(href=`${routes.order}`) Мой заказ
