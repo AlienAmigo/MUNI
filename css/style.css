@@ -4587,6 +4587,10 @@ button {
   background-position: center;
   background-size: cover; }
 
+.promo__btn {
+  width: 377px;
+  max-width: 90%; }
+
 .promo__wrapper {
   width: 90%;
   min-width: 290px;
@@ -4622,6 +4626,8 @@ button {
     height: 555px;
     background-image: url("../img/promo-bg-tablet.png");
     padding: 86px 68px 112px; }
+  .promo__btn {
+    max-width: 305px; }
   .promo__title {
     font-size: 4.68rem;
     line-height: 4.375rem; }
@@ -4645,6 +4651,8 @@ button {
     margin-bottom: 100px; } }
 
 @media (min-width: 1400px) {
+  .promo__btn {
+    max-width: 377px; }
   .promo {
     padding: 158px 6px 357px; }
   .promo__description {
