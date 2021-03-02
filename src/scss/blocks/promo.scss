@@ -5,6 +5,11 @@
   background-size: cover;
 }
 
+.promo__btn {
+  width: 377px;
+  max-width: 90%;
+}
+
 .promo__wrapper {
   @include wrapper;
 }
@@ -32,6 +37,11 @@
     height: 555px;
     background-image: url('../img/promo-bg-tablet.png');
     padding: 86px 68px 112px;
+  }
+
+
+  .promo__btn {
+    max-width: 305px;
   }
 
   .promo__title {
@@ -67,6 +77,11 @@
 }
 
 @media (min-width: $desktop-width) {
+
+  .btn {
+    max-width: 377px;
+  }
+
   .promo {
     padding: 158px 6px 357px;
   }
