@@ -122,5 +122,38 @@ ready(() => {
       myMainNav.classList.toggle('main-nav--active', false);
     });
   }
+
+  // Табы в Каталоге
+  const myCatalogTabs = document.querySelectorAll('.catalog-tabs__tab');
+  const myCatalogTabsButtons = document.querySelectorAll('.catalog-tabs__button');
+  const myCatalogTabActiveClass = 'catalog-tabs__tab--active';
+  const myCatalogTabButtonActiveClass = 'catalog-tabs__button--active';
+
+  if (myCatalogTabs && myCatalogTabsButtons) {
+    const showCatalogTab = (index) => {
+      myCatalogTabs.forEach(el => {
+        el.classList.remove(myCatalogTabActiveClass);
+        console.log('OK');
+        if (el.getAttribute('data-tab') === index) {
+          el.classList.add(myCatalogTabActiveClass);
+        }
+      });
+    };
+
+    myCatalogTabsButtons.forEach( el => {
+      el.addEventListener('click', ev => {
+        let myActiveButton = ev.target;
+        if (myActiveButton.classList.contains(myCatalogTabButtonActiveClass)) {
+          return
+        };
+        myCatalogTabsButtons.forEach(el => {
+          el.classList.remove(myCatalogTabButtonActiveClass);
+        });
+        myActiveButton.classList.add(myCatalogTabButtonActiveClass);
+        let myTabIndex = myActiveButton.getAttribute('data-tab');
+        showCatalogTab(myTabIndex);
+      });
+    });
+  }
 }
 );

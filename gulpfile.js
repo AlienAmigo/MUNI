@@ -131,8 +131,8 @@ function serve() {
     dir.src + 'scss/blocks/*.scss',
   ], compileStyles);
   watch([
-    dir.src + 'pages/*.pug',
-    dir.src + 'pug/*.pug',
+    dir.src + 'pages/**/*.pug',
+    dir.src + 'pug/**/*.pug',
   ], compilePug);
   watch(dir.src + 'js/*.js', processJs);
   watch(dir.src + 'img/*.{jpg,jpeg,png,svg,webp,gif}', copyImages);

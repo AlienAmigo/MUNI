@@ -1,0 +1,21 @@
+//- Breadcrumbs
+//- items - pages in array, e.g. ([{'Main page', 'main-page-link'}, {'News'}])
+//- last - last active page in span, e.g. (['Main page', 'News'], 'News detail')
+mixin breadcrumbs(items, last)
+  .breadcrumbs
+    ul.breadcrumbs__list&attributes(attributes)
+      each item in items
+        li.breadcrumbs__item
+          //- if breadcrumb is single
+          if ((items.length === 1) && !last)
+            span.breadcrumbs__link= item.title
+          else
+            a(href=`${item.path}` title=item.title).breadcrumbs__link= item.title
+            .breadcrumbs__delimiter /
+
+      if last
+        li.breadcrumbs__item
+          span.breadcrumbs__link.breadcrumbs__link--last= last
+
+//- +breadcrumbs(['Main page', 'News'], 'News detail')
+//- +breadcrumbs(['Main page'])

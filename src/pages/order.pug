@@ -3,9 +3,11 @@ extends ../pug/layout.pug
 block meta
   title #{myPageTitle} Оформление заказа
 
+block breadcrumbs
+  +breadcrumbs([breadcrumbs.root, breadcrumbs.order], 'Оформление заказа')
 block main
   h1.page__title.offer__title Оформление заказа
-  <div class="offer">
+  div.offer
     <form method="POST" class="offer-form">
       <div class="offer-form__subhead">Контактные данные</div>
       <input class="offer-form__input offer-form__input--name" name="offer-name" type="text" placeholder="Имя"/>
@@ -31,4 +33,3 @@ block main
         <div class="offer-summ-total"><span class="offer-summ-total__text">Итого&thinsp;:</span><span class="span offer-summ-total__value">5&thinsp;800&nbsp;₽</span></div>
       </div>
     </div>
-  </div>

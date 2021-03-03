@@ -1,6 +1,28 @@
 extends ../pug/layout.pug
 
 block meta
-  title #{myPageTitle} Каталог
+  - let currentPageTitle = 'Каталог';
+  title= `${myPageTitle} ${currentPageTitle}`
+
+block breadcrumbs
+  +breadcrumbs([breadcrumbs.root], currentPageTitle)
 
 block main
+  include ../pug/catalog-data.pug
+  h1.page__title.catalog__title= currentPageTitle
+  .catalog-tabs
+    .catalog-tabs__buttons
+      h2.catalog-tabs__button.catalog-tabs__button--active(data-tab='1') Стили
+      h2.catalog-tabs__button(data-tab='2') Позиции
+    .catalog-tabs__wrapper
+      .catalog-tabs__tab.catalog-tabs__tab--active(data-tab='1')
+        - for (let i = 0; i < catalogStyles.length; i++)
+          a.styles-item(href="#")
+            .styles-item__picture
+              picture
+                source(media="(min-width: 0)", srcset=`img/${catalogStyles[i].imgSM}`, type="image/webp")
+                source(media="(min-width: 768px)", srcset=`img/${catalogStyles[i].imgMD}`, type="image/webp")
+                source(media="(min-width: 1400px)", srcset=`img/${catalogStyles[i].imgXL}`, type="image/webp")
+                img(src=`img/${catalogStyles[i].img}`, alt=`"Свадебная полиграфия 0${i}"`)
+            .styles-item__title= catalogStyles[i].title
+      .catalog-tabs__tab(data-tab='2')

@@ -1,6 +1,7 @@
 //- Стандартный шаблон страницы
 include data.pug
 include mixins.pug
+include blocks/breadcrumbs.pug
 
 doctype html
 html(class='page  no-js', lang='ru')
@@ -33,12 +34,14 @@ html(class='page  no-js', lang='ru')
   body
     noscript У вас отключен JavaScript. Это пугает.
 
-    include header.pug
+    include blocks/header.pug
+
+    block breadcrumbs
 
     main.page-main
       block main
 
-    include footer.pug
+    include blocks/footer.pug
 
     .popup
       .popup-body

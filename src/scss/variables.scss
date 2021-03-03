@@ -1,5 +1,5 @@
+// ==============================================================
 // Colors
-
 $white-color: #ffffff;
 $black-color: #000000;
 
@@ -21,16 +21,19 @@ $line-bottom-color: #ececec;
 $secondary-color: #5ab6bb;
 
 // Fonts
-
 $titles-font: 'Cormorant', Times, serif;
 $text-font: 'Roboto', Helvetica, Arial, sans-serif;
 $links-font: 'Montserrat', Helvetica, Arial, sans-serif;
 
+// ==============================================================
 // Breakpoints
+
 $tablet-width: 768px;
 $desktop-width: 1400px;
 
+// ==============================================================
 //Grid
+
 $margin: 20px;
 $cols-1-12: calc((100% - 220px) / 12);
 $cols-2-12: calc((100% - 220px) / 12 * 2 + 20px);
@@ -48,6 +51,7 @@ $cols-12-12: 100%;
 $margin-xs: 30px;
 $cols-xs-1-2: calc((100% - 30px) / 2);
 
+// ==============================================================
 // Borders
 
 $primary-border: 1px solid $decorations-text-color;

@@ -1,7 +1,7 @@
 -
-  //- let siteRoot ='/';
-  let siteRoot = 'https://alienamigo.github.io/MUNI/';
-  //- нужен только для корректного sотображения на gitPages, при необходимости заменить на '/', и проект пересоберётся с относительным путём;
+  let siteRoot ='/';
+  //- let siteRoot = 'https://alienamigo.github.io/MUNI/';
+  //- нужен только для корректного отображения на gitPages, при необходимости заменить на '/', и проект пересоберётся с относительным путём;
 
   const myPageTitle = "MUNI - студия декора событий | ";
 
@@ -10,4 +10,21 @@
     order: `${siteRoot}order.html`,
     catalog: `${siteRoot}catalog.html`,
     polygraphy: `${siteRoot}polygraphy.html`,
-  }
+    order: `${siteRoot}order.html`,
+    cart: `${siteRoot}cart.html`,
+  };
+
+  const breadcrumbs = {
+    root: {
+      title: 'Главная',
+      path: routes.root,
+    },
+    catalog: {
+      title: 'Каталог',
+      path: routes.catalog,
+    },
+    order: {
+      title: 'Мой заказ',
+      path: routes.cart,
+    },
+  };
