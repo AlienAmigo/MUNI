@@ -1,6 +1,6 @@
 -
-  //- let siteRoot ='/';
-  let siteRoot = 'https://alienamigo.github.io/MUNI/';
+  let siteRoot ='/';
+  //- let siteRoot = 'https://alienamigo.github.io/MUNI/';
   //- нужен только для корректного отображения на gitPages, при необходимости заменить на '/', и проект пересоберётся с относительным путём;
 
   const myPageTitle = "MUNI - студия декора событий | ";
@@ -27,4 +27,22 @@
       title: 'Мой заказ',
       path: routes.cart,
     },
+  };
+
+  // ф-ция разделяет классы в ценах
+  const convertPrice = (summ) => {
+    if (summ.toString().length < 4) {
+      return summ;
+    }
+    else {
+      return (summ.toString().replace(/(\d+)(\d{3})$/, '$1\u00A0$2'));
+    }
+  }
+
+  const createTitle = (el) => {
+    if ((el.position === 'basic') || (el.position === 'onePersonSet')) {
+      return `${el.title}`;}
+    else {
+      return catalogPositionTypes[el.position];
+    }
   };

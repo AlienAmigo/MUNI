@@ -2,20 +2,25 @@ extends ../pug/layout.pug
 
 block meta
   - let currentPageTitle = 'Каталог';
+  include ../pug/catalog-data.pug
+
   title= `${myPageTitle} ${currentPageTitle}`
 
 block breadcrumbs
   +breadcrumbs([breadcrumbs.root], currentPageTitle)
 
 block main
-  include ../pug/catalog-data.pug
+
   h1.page__title.catalog__title= currentPageTitle
   .catalog-tabs
     .catalog-tabs__buttons
-      h2.catalog-tabs__button.catalog-tabs__button--active(data-tab='1') Стили
-      h2.catalog-tabs__button(data-tab='2') Позиции
+      h2.catalog-tabs__button(data-tab='1') Стили
+      h2.catalog-tabs__button.catalog-tabs__button--active(data-tab='2') Позиции
+
     .catalog-tabs__wrapper
-      .catalog-tabs__tab.catalog-tabs__tab--active(data-tab='1')
+
+      //- таб «Стили»
+      .catalog-tabs__tab(data-tab='1')
         - for (let i = 0; i < catalogStyles.length; i++)
           a.styles-item(href="#")
             .styles-item__picture
@@ -25,4 +30,35 @@ block main
                 source(media="(min-width: 1400px)", srcset=`img/${catalogStyles[i].imgXL}`, type="image/webp")
                 img(src=`img/${catalogStyles[i].img}`, alt=`"Свадебная полиграфия 0${i}"`)
             .styles-item__title= catalogStyles[i].title
-      .catalog-tabs__tab(data-tab='2')
+
+      //- таб «Позиции»
+      .catalog-tabs__tab.catalog-tabs__tab--active(data-tab='2')
+        .positions__wrapper
+          each item in catalogPositions
+            .position-item
+              .position-item__picture
+                picture
+                  source(media="(min-width: 0)", srcset=`img/${item.imgSM}`, type="image/webp")
+                  source(media="(min-width: 768px)", srcset=`img/${item.imgMD}`, type="image/webp")
+                  source(media="(min-width: 1400px)", srcset=`img/${item.imgXL}`, type="image/webp")
+                  img(src=`img/${item.img}`, alt=`${item.title}`)
+              - if (item.position === 'basic' || item.position === 'onePersonSet')
+                h4.position-item__title= catalogPositionTypes[item.position]
+                 span= `«${createTitle(item)}»:`
+                .position-item__descr= item.descr
+                .position-item__qty-price-wrapper
+                  .position-item__qty
+                    label.position-item__qty-title(for=`qty-${catalogPositions.indexOf(item)}`) Количество персон
+                    input.position-item__qty-input(name=`qty-${catalogPositions.indexOf(item)}`)
+                  .position-item__price= convertPrice(item.price)
+                    span &nbsp;₽
+              - if (item.position !== 'basic' && item.position !== 'onePersonSet')
+                .position-item__head-wrapper
+                  h4.position-item__title= `${createTitle(item)}`
+                  .position-item__price= convertPrice(item.price)
+                    span ₽
+                .position-item__qty
+                  label.position-item__qty-title(for=`qty-${catalogPositions.indexOf(item)}`) Количество персон
+                  input.position-item__qty-input(name=`qty-${catalogPositions.indexOf(item)}`)
+
+              button.btn.btn--secondary.position-item__select-button Выбрать
