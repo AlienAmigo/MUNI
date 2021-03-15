@@ -23,7 +23,6 @@ html(class='page  no-js', lang='ru')
     link(rel="preload" href="fonts/subset-Cormorant-Bold.woff2" as="font" crossorigin="anonymous")
     link(rel="preload" href="fonts/subset-Roboto-Regular.woff2" as="font" crossorigin="anonymous")
     link(rel="stylesheet" href="css/style.css")
-    script(src="js/script.min.js" async)
     block meta
       title #{myPageTitle}
 
@@ -48,4 +47,5 @@ html(class='page  no-js', lang='ru')
         .popup-close
         .popup-inner
 
-    script(src='js/script.min.js' async)
+  script(src='js/vendors.min.js' defer)
+  script(src='js/script.min.js' defer)

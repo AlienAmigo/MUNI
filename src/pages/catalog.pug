@@ -21,21 +21,27 @@ block main
 
       //- таб «Стили»
       .catalog-tabs__tab(data-tab='1')
-        - for (let i = 0; i < catalogStyles.length; i++)
-          a.styles-item(href="#")
-            .styles-item__picture
-              picture
-                source(media="(min-width: 0)", srcset=`img/${catalogStyles[i].imgSM}`, type="image/webp")
-                source(media="(min-width: 768px)", srcset=`img/${catalogStyles[i].imgMD}`, type="image/webp")
-                source(media="(min-width: 1400px)", srcset=`img/${catalogStyles[i].imgXL}`, type="image/webp")
-                img(src=`img/${catalogStyles[i].img}`, alt=`"Свадебная полиграфия 0${i}"`)
-            .styles-item__title= catalogStyles[i].title
+        .styles
+          - for (let i = 0; i < catalogStyles.length; i++)
+            a.styles-item(href="#")
+              .styles-item__picture
+                picture
+                  source(media="(min-width: 0)", srcset=`img/${catalogStyles[i].imgSM}`, type="image/webp")
+                  source(media="(min-width: 768px)", srcset=`img/${catalogStyles[i].imgMD}`, type="image/webp")
+                  source(media="(min-width: 1400px)", srcset=`img/${catalogStyles[i].imgXL}`, type="image/webp")
+                  img(src=`img/${catalogStyles[i].img}`, alt=`"Свадебная полиграфия 0${i}"`)
+              .styles-item__title= catalogStyles[i].title
 
       //- таб «Позиции»
       .catalog-tabs__tab.catalog-tabs__tab--active(data-tab='2')
+        form.positions__filter(action="")
+          label.positions__filter-label(for="") Выберите позицию
+          select.positions__filter-select(name="", id="positions-filter")
+            each item in filterItems
+              option.positions__filter-option(data-type=`${item.type}`)= item.title
         .positions__wrapper
           each item in catalogPositions
-            .position-item
+            form.position-item
               .position-item__picture
                 picture
                   source(media="(min-width: 0)", srcset=`img/${item.imgSM}`, type="image/webp")
@@ -49,7 +55,7 @@ block main
                 .position-item__qty-price-wrapper
                   .position-item__qty
                     label.position-item__qty-title(for=`qty-${catalogPositions.indexOf(item)}`) Количество персон
-                    input.position-item__qty-input(name=`qty-${catalogPositions.indexOf(item)}`)
+                    input.position-item__qty-input(id=`qty-${catalogPositions.indexOf(item)}`)
                   .position-item__price= convertPrice(item.price)
                     span &nbsp;₽
               - if (item.position !== 'basic' && item.position !== 'onePersonSet')

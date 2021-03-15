@@ -1,5 +1,41 @@
 'use strict';
 
+// const filterItems = [
+//   {
+//     type: 'basic',
+//     title: 'Базовые комплекты',
+//   },
+//   {
+//     type: 'onePersonSet',
+//     title: 'Сервировочный набор',
+//   },
+//   {
+//     type: 'goblet',
+//     title: 'Бокалы',
+//   },
+//   {
+//     type: 'plate',
+//     title: 'Тарелки',
+//   },
+//   {
+//     type: 'servingPlate',
+//     title: 'Тарелки сервировочные',
+//   },
+//   {
+//     type: 'flatware',
+//     title: 'Приборы',
+//   },
+//   {
+//     type: 'tissue',
+//     title: 'Салфетки',
+//   },
+//   {
+//     type: 'candles',
+//     title: 'Толстые свечи',
+//   }
+// ];
+
+
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
     fn();
@@ -133,7 +169,6 @@ ready(() => {
     const showCatalogTab = (index) => {
       myCatalogTabs.forEach(el => {
         el.classList.remove(myCatalogTabActiveClass);
-        console.log('OK');
         if (el.getAttribute('data-tab') === index) {
           el.classList.add(myCatalogTabActiveClass);
         }
@@ -155,5 +190,15 @@ ready(() => {
       });
     });
   }
+
+  // селект (фильтр) в Каталоге
+  const positionsFilter = new Choices('#positions-filter', {
+    searchEnabled: false,
+    itemSelectText: '',
+    silent: true,
+  });
+
+  const filterOptions = document.querySelectorAll('.choices__item--choice');
+
 }
 );

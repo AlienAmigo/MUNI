@@ -1,0 +1,21 @@
+.styles {
+  @include wrapper();
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto 0;
+}
+
+@media (min-width: $tablet-width) {
+  .styles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .styles {
+    margin: 100px 0 0;
+  }
+}

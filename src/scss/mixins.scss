@@ -19,18 +19,31 @@
 }
 
 @mixin wrapper {
-  width: 90%;
-  min-width: 290px;
-  max-width: 668px;
+  width: 320px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: 87%;
-    max-width: 1000px;
+    width: 656px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 84.5%;
-    max-width: 1500px;
+    width: 1170px;
+  }
+}
+
+// стилизация скролла эл-та
+@mixin scroll-style($width: 10px, $scrollbar-color: rgba(0, 0, 0, 0)) {
+  // стилизация скролла
+  // Mozilla
+  scrollbar-color: $scrollbar-color rgba(0, 0, 0, 0.4);
+  scrollbar-width: thin;
+  // Webkit
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+    background-color: $scrollbar-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }

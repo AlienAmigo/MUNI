@@ -1,16 +1,18 @@
 .position-item {
   @include wrapper();
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 50px;
 
   &__picture {
-    width: 100vw;
-    height: max-content;
-    margin-left: calc((100% - 100vw) / 2);
+    width: 100%;
+    height: 418px;
 
     picture, img {
       width: 100%;
-      height: 130%;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover;
       object-position: center center;
     }
   }
@@ -65,7 +67,9 @@
       justify-content: center;
       width: 63px;
       height: 25px;
-      border: 1px solid #464343;
+      border: 1px solid $grey-titles-color;
+      font-family: $links-font;
+      text-align: center;
     }
   }
 
@@ -78,7 +82,7 @@
     color: $grey-text-color;
 
     span {
-      font-weight: 300;
+      font-weight: 100;
     }
   }
 
@@ -94,6 +98,119 @@
     border: none;
     width: 100%;
     max-width: 100%;
+    font-family: $links-font;
+    font-size: 1.125em;
+    line-height: 139%;
   }
+}
 
+@media (min-width: $tablet-width) {
+  .position-item {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    width: $cols-4-12;
+    margin: 0 0 50px;
+
+    &:last-of-type {
+      margin: 0 auto 50px 0;
+    }
+
+    &__picture {
+      height: 265px;
+    }
+
+    &__title {
+      flex: 1;
+      margin-top: 20px;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    &__descr {
+      margin: 10px 0 20px;
+      font-size: 0.5rem;
+      line-height: 0.625rem;
+    }
+
+    &__qty-title {
+      margin-bottom: 10px;
+      font-size: 0.5rem;
+      line-height: 0.625rem;
+    }
+
+    &__qty-input {
+      width: 56px;
+      height: 22px;
+    }
+
+    &__price {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+
+    &__select-button {
+      margin: 20px 0 0;
+      padding: 11px 0;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .position-item {
+    margin: 0 0 73px;
+
+    &:last-of-type {
+      margin: 0 auto 73px 0;
+    }
+
+    &__picture {
+      height: 450px;
+    }
+
+    &__title {
+      margin-top: 33px;
+      font-size: 1.125rem;
+      line-height: 139%;
+    }
+
+    &__descr {
+      margin: 25px 0 20px;
+      font-size: 0.625rem;
+      line-height: 0.75rem;
+    }
+
+    &__qty-price-wrapper {
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    &__qty {
+      display: inline-flex;
+      margin-right: 10px;
+    }
+
+    &__qty-title {
+      margin-bottom: 6px;
+      font-size: 0.625rem;
+      line-height: 0.75rem;
+    }
+
+    &__qty-input {
+      width: 63px;
+      height: 25px;
+    }
+
+    &__price {
+      margin: 6px 0 0 10px;
+      font-size: 1.875rem;
+      line-height: 1.5rem;
+    }
+
+    &__select-button {
+      padding: 18px 0 17px;
+      font-size: 0.875rem;
+    }
+  }
 }

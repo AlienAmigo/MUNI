@@ -7,7 +7,15 @@
   &__buttons {
     display: flex;
     flex-direction: row;
-    margin: 0 0 50px;
+    margin: 0;
+
+    &--styles {
+      margin-bottom: 50px;
+    }
+
+    &--positions {
+      margin-bottom: 30px;
+    }
   }
 
   &__button {
