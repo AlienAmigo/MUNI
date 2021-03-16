@@ -5635,6 +5635,21 @@ button {
     line-height: 120%;
     text-align: center;
     color: #494948; }
+  .position-item__head-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin: 5px 0 0; }
   .position-item__qty-price-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5643,9 +5658,9 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -5660,7 +5675,8 @@ button {
             flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    margin: 20px 0 0; }
     .position-item__qty-title {
       margin: 0 0 6px;
       font-family: "Montserrat", Helvetica, Arial, sans-serif;
@@ -5689,6 +5705,7 @@ button {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    margin-left: 20px;
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-size: 1.875rem;
@@ -5696,20 +5713,6 @@ button {
     color: #494948; }
     .position-item__price span {
       font-weight: 100; }
-  .position-item__head-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
   .position-item__select-button {
     margin: 30px 0 0;
     border: none;
@@ -5747,6 +5750,10 @@ button {
       margin: 10px 0 20px;
       font-size: 0.5rem;
       line-height: 0.625rem; }
+    .position-item__qty-price-wrapper {
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
     .position-item__qty-title {
       margin-bottom: 10px;
       font-size: 0.5rem;
@@ -5781,9 +5788,9 @@ button {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start; }
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
     .position-item__qty {
       display: -webkit-inline-box;
       display: -ms-inline-flexbox;
