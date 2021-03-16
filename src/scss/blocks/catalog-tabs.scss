@@ -52,7 +52,7 @@
 
     &--active {
       display: flex;
-      animation: slideInLeft 1s ease-in;
+      animation: fadeIn 0.75s ease-in;
     }
   }
 }

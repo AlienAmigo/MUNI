@@ -14,13 +14,13 @@ block main
   h1.page__title.catalog__title= currentPageTitle
   .catalog-tabs
     .catalog-tabs__buttons
-      h2.catalog-tabs__button(data-tab='1') Стили
-      h2.catalog-tabs__button.catalog-tabs__button--active(data-tab='2') Позиции
+      h2.catalog-tabs__button.catalog-tabs__button--active(data-tab='1') Стили
+      h2.catalog-tabs__button(data-tab='2') Позиции
 
     .catalog-tabs__wrapper
 
       //- таб «Стили»
-      .catalog-tabs__tab(data-tab='1')
+      .catalog-tabs__tab.catalog-tabs__tab--active(data-tab='1')
         .styles
           - for (let i = 0; i < catalogStyles.length; i++)
             a.styles-item(href="#")
@@ -33,7 +33,7 @@ block main
               .styles-item__title= catalogStyles[i].title
 
       //- таб «Позиции»
-      .catalog-tabs__tab.catalog-tabs__tab--active(data-tab='2')
+      .catalog-tabs__tab(data-tab='2')
         form.positions__filter(action="")
           label.positions__filter-label(for="") Выберите позицию
           select.positions__filter-select(name="", id="positions-filter")
