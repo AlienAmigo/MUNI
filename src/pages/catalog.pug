@@ -55,16 +55,16 @@ block main
                 .position-item__qty-price-wrapper
                   .position-item__qty
                     label.position-item__qty-title(for=`qty-${catalogPositions.indexOf(item)}`) Количество персон
-                    input.position-item__qty-input(id=`qty-${catalogPositions.indexOf(item)}`)
+                    input.position-item__qty-input(id=`qty-${catalogPositions.indexOf(item)}`, type="number")
                   .position-item__price= convertPrice(item.price)
                     span &nbsp;₽
               - if (item.position !== 'basic' && item.position !== 'onePersonSet')
                 .position-item__head-wrapper
                   h4.position-item__title= `${createTitle(item)}`
                   .position-item__price= convertPrice(item.price)
-                    span ₽
+                    span &nbsp;₽
                 .position-item__qty
                   label.position-item__qty-title(for=`qty-${catalogPositions.indexOf(item)}`) Количество персон
-                  input.position-item__qty-input(name=`qty-${catalogPositions.indexOf(item)}`)
+                  input.position-item__qty-input(name=`qty-${catalogPositions.indexOf(item)}`, type="number")
 
               button.btn.btn--secondary.position-item__select-button Выбрать
