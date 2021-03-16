@@ -3328,7 +3328,7 @@ button {
     .page-header__phone span.hide-mobile {
       display: inline-block; }
   .page-header__order {
-    margin: 0 0 0 5%;
+    margin: 0 0 0 2%;
     padding: 7px 25px;
     font-size: 0.875rem;
     line-height: 1.0625rem; }
@@ -5276,8 +5276,8 @@ button {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-animation: slideInLeft 1s ease-in;
-              animation: slideInLeft 1s ease-in; }
+      -webkit-animation: fadeIn 0.75s ease-in;
+              animation: fadeIn 0.75s ease-in; }
 
 @media (min-width: 768px) {
   .catalog-tabs {
