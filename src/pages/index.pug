@@ -21,9 +21,10 @@ block main
           p.about__description-text Концепции разработаны опытными флористами и&nbsp;декораторами, которые работают в&nbsp;командах лидеров event-сферы.
       .about__img-wrapper
         picture
+          source(media="(min-width: 0)", srcset="img/flowers.webp", type="image/webp")
+          source(media="(min-width: 768px)", srcset="img/flowers-tablet.webp", type="image/webp")
           source(media="(min-width: 1400px)", srcset="img/flowers.webp", type="image/webp")
-          source(media="(min-width: 768px)", srcset="/img/flowers-tablet.webp", type="image/webp")
-          img(src="img/flowers-tablet.png", alt="Букет цветов")
+          img(src="img/flowers.png", alt="Букет цветов")
   section.contacts
     h2.page__title.contacts__title Контакты
     .contacts__list

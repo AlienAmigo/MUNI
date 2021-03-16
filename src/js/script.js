@@ -196,6 +196,7 @@ ready(() => {
     searchEnabled: false,
     itemSelectText: '',
     silent: true,
+    shouldSort: false
   });
 
   const filterOptions = document.querySelectorAll('.choices__item--choice');

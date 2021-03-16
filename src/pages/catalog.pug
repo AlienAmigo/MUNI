@@ -37,6 +37,7 @@ block main
         form.positions__filter(action="")
           label.positions__filter-label(for="") Выберите позицию
           select.positions__filter-select(name="", id="positions-filter")
+            option.positions__filter-option(data-type='all') Все позиции
             each item in filterItems
               option.positions__filter-option(data-type=`${item.type}`)= item.title
         .positions__wrapper
@@ -54,7 +55,7 @@ block main
                 .position-item__descr= item.descr
                 .position-item__qty-price-wrapper
                   .position-item__qty
-                    label.position-item__qty-title(for=`qty-${catalogPositions.indexOf(item)}`) Количество персон
+                    label.position-item__qty-title(for=`qty-${catalogPositions.indexOf(item)}`)= `${qtyTitle(item.position)}`
                     input.position-item__qty-input(id=`qty-${catalogPositions.indexOf(item)}`, type="number")
                   .position-item__price= convertPrice(item.price)
                     span &nbsp;₽

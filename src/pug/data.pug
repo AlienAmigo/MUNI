@@ -46,3 +46,12 @@
       return catalogPositionTypes[el.position];
     }
   };
+
+  const qtyTitle = (type) => {
+    if (type === 'basic') {
+      return 'Количество столов'
+      }
+    else {
+      return 'Количество персон';
+    }
+  }
