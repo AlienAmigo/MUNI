@@ -61,7 +61,7 @@ button {
 }
 
 .wrapper {
-  @include wrapper;
+  @include wrapper; /* stylelint-disable-line order/order */
 }
 
 @mixin wrapper-reset {

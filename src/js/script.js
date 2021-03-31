@@ -164,6 +164,5 @@ ready(() => {
   });
 
   const filterOptions = document.querySelectorAll('.choices__item--choice');
-
 }
 );

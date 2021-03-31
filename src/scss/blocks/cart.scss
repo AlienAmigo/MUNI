@@ -1,5 +1,5 @@
 .cart {
-  @include wrapper;
+  @include wrapper; /* stylelint-disable-line order/order */
   display: flex;
   flex-direction: row;
   justify-content: space-between;

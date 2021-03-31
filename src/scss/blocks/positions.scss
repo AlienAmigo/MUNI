@@ -1,13 +1,14 @@
 .positions {
+
   &__wrapper {
-    @include wrapper();
+    @include wrapper(); /* stylelint-disable-line order/order */
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
   }
 
   &__filter {
-    @include wrapper();
+    @include wrapper(); /* stylelint-disable-line order/order */
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -18,24 +19,26 @@
     color: $grey-text-color;
 
     & .choices {
+
       &::after {
         top: 50%;
         right: 40px;
         width: 20px;
         height: 20px;
         margin: 0;
-        border-top: 0 solid transparent !important;
-        border-right: 1px solid $grey-text-color !important;
-        border-bottom: 1px solid $grey-text-color !important;
-        border-left: 0 solid transparent !important;
+        border-top: 0 solid transparent !important; /* stylelint-disable-line declaration-no-important */
+        border-right: 1px solid $grey-text-color !important; /* stylelint-disable-line declaration-no-important */
+        border-bottom: 1px solid $grey-text-color !important; /* stylelint-disable-line declaration-no-important */
+        border-left: 0 solid transparent !important; /* stylelint-disable-line declaration-no-important */
         transform: rotate(45deg) translateY(-100%);
       }
 
-      &.is-open.is-focused {
+      &.is-open.is-focused { /* stylelint-disable-line selector-max-class */
+
         &::after {
+          right: 40px !important; /* stylelint-disable-line declaration-no-important */
+          top: 50% !important; /* stylelint-disable-line declaration-no-important */
           margin: 0;
-          top: 50% !important;
-          right: 40px !important;
           transform: rotate(45deg) translateY(-100%);
         }
       }
@@ -55,14 +58,14 @@
       line-height: 139%;
       font-family: $links-font;
       color: $grey-text-color;
-      @include text-overflow();
+      @include text-overflow(); /* stylelint-disable-line order/order */
     }
 
     & .choices__list {
       overflow: auto;
-      @include scroll-style();
+      @include scroll-style(); /* stylelint-disable-line order/order */
 
-      &.choices__list--dropdown {
+      &.choices__list--dropdown { /* stylelint-disable-line selector-max-class */
         border: 0;
       }
 
@@ -91,13 +94,14 @@
 }
 
 @media (min-width: $tablet-width) {
+
   .positions {
     margin-bottom: 0;
 
     &__wrapper {
       flex-direction: row;
-      justify-content: space-between;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     &__filter {
@@ -135,7 +139,9 @@
 }
 
 @media (min-width: $desktop-width) {
+
   .positions {
+
     &__filter {
       width: 100%;
       margin: 67px calc(((100% - 220px) / 12) * 3 + (20px * 3)) 90px calc(((100% - 220px) / 12) + 20px);

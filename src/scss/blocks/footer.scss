@@ -3,7 +3,7 @@
   border: 1px solid #CAC7C7;
 
   &__wrapper {
-    @include wrapper;
+    @include wrapper; /* stylelint-disable-line order/order */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,7 +19,7 @@
     height: 42px;
     margin-top: 2px;
     outline: 0;
-    @include hover;
+    @include hover; /* stylelint-disable-line order/order */
 
     &-image {
       width: 100%;
@@ -60,7 +60,7 @@
     font-size: 0.75rem;
     font-family: $links-font;
     color: $grey-text-color;
-    @include hover;
+    @include hover; /* stylelint-disable-line order/order */
   }
 
   &__instagram {
@@ -70,7 +70,7 @@
     margin-left: 8px;
     background: url('../img/icon-instagram.svg') no-repeat center center / 100% 100%;
     outline: 0;
-    @include hover;
+    @include hover; /* stylelint-disable-line order/order */
   }
 
   &__email {
@@ -79,7 +79,7 @@
     line-height: 1.25rem;
     font-family: $links-font;
     color: $grey-text-color;
-    @include hover;
+    @include hover; /* stylelint-disable-line order/order */
   }
 }
 

@@ -11,13 +11,13 @@
 }
 
 .promo__wrapper {
-  @include wrapper;
+  @include wrapper; /* stylelint-disable-line order/order */
 }
 
 .promo__title {
   color: $white-color;
   font-family: $titles-font;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 2.5rem;
   line-height: 2.3rem;
   margin: 0;
@@ -33,6 +33,7 @@
 }
 
 @media (min-width: $tablet-width) {
+
   .promo {
     height: 555px;
     background-image: url('../img/promo-bg-tablet.png');
@@ -58,6 +59,7 @@
 }
 
 @media (min-width: $desktop-width) {
+
   .promo {
     height: 985px;
     background-image: url('../img/promo-bg-desktop.png');

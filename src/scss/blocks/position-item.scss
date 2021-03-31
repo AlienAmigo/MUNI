@@ -1,5 +1,5 @@
 .position-item {
-  @include wrapper();
+  @include wrapper(); /* stylelint-disable-line order/order */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,8 @@
     width: 100%;
     height: 418px;
 
-    picture, img {
+    picture,
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -108,6 +109,7 @@
 }
 
 @media (min-width: $tablet-width) {
+
   .position-item {
     display: flex;
     flex-direction: column;
@@ -165,6 +167,7 @@
 }
 
 @media (min-width: $desktop-width) {
+
   .position-item {
     margin: 0 0 73px;
 

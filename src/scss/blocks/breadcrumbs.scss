@@ -1,5 +1,5 @@
 .breadcrumbs {
-  @include wrapper;
+  @include wrapper; /* stylelint-disable-line order/order */
   display: none;
   width: 100%;
 }
@@ -46,7 +46,7 @@
       line-height: inherit;
       color: inherit;
       cursor: pointer;
-      @include hover();
+      @include hover(); /* stylelint-disable-line order/order */
 
       &--last {
         cursor: default;

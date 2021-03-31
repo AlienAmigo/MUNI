@@ -2255,8 +2255,8 @@
 }
 
 .flipInX {
-  -webkit-backface-visibility: visible !important;
-  backface-visibility: visible !important;
+  -webkit-backface-visibility: visible !important; /* stylelint-disable-line declaration-no-important */
+  backface-visibility: visible !important; /* stylelint-disable-line declaration-no-important */
   -webkit-animation-name: flipInX;
   animation-name: flipInX;
 }
@@ -2332,8 +2332,8 @@
 }
 
 .flipInY {
-  -webkit-backface-visibility: visible !important;
-  backface-visibility: visible !important;
+  -webkit-backface-visibility: visible !important; /* stylelint-disable-line declaration-no-important */
+  backface-visibility: visible !important; /* stylelint-disable-line declaration-no-important */
   -webkit-animation-name: flipInY;
   animation-name: flipInY;
 }
@@ -2385,8 +2385,8 @@
   animation-duration: 0.75s;
   -webkit-animation-name: flipOutX;
   animation-name: flipOutX;
-  -webkit-backface-visibility: visible !important;
-  backface-visibility: visible !important;
+  -webkit-backface-visibility: visible !important; /* stylelint-disable-line declaration-no-important */
+  backface-visibility: visible !important; /* stylelint-disable-line declaration-no-important */
 }
 /* stylelint-enable */
 
@@ -2434,8 +2434,8 @@
 .flipOutY {
   -webkit-animation-duration: 0.75s;
   animation-duration: 0.75s;
-  -webkit-backface-visibility: visible !important;
-  backface-visibility: visible !important;
+  -webkit-backface-visibility: visible !important; /* stylelint-disable-line declaration-no-important */
+  backface-visibility: visible !important; /* stylelint-disable-line declaration-no-important */
   -webkit-animation-name: flipOutY;
   animation-name: flipOutY;
 }

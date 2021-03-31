@@ -33,7 +33,7 @@
     font-weight: 300;
     color: $light-text-color;
     cursor: pointer;
-    @include hover();
+    @include hover(); /* stylelint-disable-line order/order */
 
     &--active {
       background-color: $bg-darker-color;
@@ -59,7 +59,7 @@
 
 @media (min-width: $tablet-width) {
   .catalog-tabs {
-    @include wrapper;
+    @include wrapper; /* stylelint-disable-line order/order */
     margin-bottom: 59px;
 
     &__button {

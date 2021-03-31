@@ -54,7 +54,7 @@
       }
 
       &:hover {
-        @include hover;
+        @include hover; /* stylelint-disable-line order/order */
       }
 
       a {

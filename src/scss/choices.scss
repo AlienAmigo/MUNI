@@ -50,7 +50,7 @@ $choices-z-index: 1;
   }
 
   [hidden] {
-    display: none !important;
+    display: none !important; /* stylelint-disable-line declaration-no-important */
   }
 }
 

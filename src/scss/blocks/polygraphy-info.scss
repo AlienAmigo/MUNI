@@ -24,7 +24,7 @@
   }
 
   &__text {
-    @include wrapper();
+    @include wrapper(); /* stylelint-disable-line order/order */
     font-family: $links-font;
     font-size: 0.75rem;
     line-height: 125%;
@@ -46,8 +46,9 @@
 }
 
 @media (min-width: $tablet-width) {
+
   .polygraphy-info {
-    @include wrapper();
+    @include wrapper(); /* stylelint-disable-line order/order */
     flex-direction: row-reverse;
     align-items: center;
 
@@ -55,7 +56,7 @@
       width: calc(((100% - 220px) / 12) * 7 + (20px * 6) + ((100vw - 100%) / 2));
       height: 378px;
       margin-right: calc((100% - 100vw) / 2);
-   }
+    }
 
     &__text-wrapper {
       width: calc(((100% - 220px) / 12) * 5 + (20px * 6));
@@ -80,10 +81,12 @@
 }
 
 @media (min-width: $desktop-width) {
+
   .polygraphy-info {
+
     &__picture {
       height: 565px;
-   }
+    }
 
     &__text-wrapper {
       width: calc(((100% - 220px) / 12) * 5 + (20px * 5));
@@ -108,7 +111,7 @@
 
     &__price {
       font-size: 1.875rem;
-      font-weight: 2.3125rem;
+      font-weight: 600;
     }
   }
 }

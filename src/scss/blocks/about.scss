@@ -16,7 +16,7 @@
     padding: 41px 0 45px;
 
     &-text {
-      @include wrapper();
+      @include wrapper(); /* stylelint-disable-line order/order */
       margin-top: 0;
       margin-bottom: 0;
       font-family: $links-font;
@@ -37,7 +37,7 @@
     padding: 0;
 
     &__wrapper {
-      @include wrapper;
+      @include wrapper; /* stylelint-disable-line order/order */
       display: flex;
       flex-direction: row;
       justify-content: flex-start;

@@ -5,13 +5,14 @@
   width: 100%;
   margin: 0 0 31px;
   padding: 0;
-  @include hover;
+  @include hover; /* stylelint-disable-line order/order */
 
   &__picture {
     width: 100%;
     height: 108%;
 
-    picture, img {
+    picture,
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -32,6 +33,7 @@
 }
 
 @media (min-width: $tablet-width) {
+
   .styles-item {
     width: $cols-4-12;
     margin: 0 0 50px;
@@ -49,8 +51,9 @@
 }
 
 @media (min-width: $desktop-width) {
+
   .styles-item {
-     margin: 0 0 100px;
+    margin: 0 0 100px;
 
     &__picture {
       height: 480px;

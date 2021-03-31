@@ -3,7 +3,7 @@
   border-bottom: 1px solid #CAC7C7;
 
   &__wrapper {
-    @include wrapper;
+    @include wrapper; /* stylelint-disable-line order/order */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -14,7 +14,7 @@
   &__logo {
     width: 42px;
     height: 42px;
-    @include hover;
+    @include hover; /* stylelint-disable-line order/order */
 
     &-image {
       width: 100%;
@@ -48,7 +48,7 @@
     color: $grey-text-color;
     font-size: 0.75rem;
     line-height: 0.91rem;
-    @include hover;
+    @include hover; /* stylelint-disable-line order/order */
 
     span.hide-mobile {
       display: none;
@@ -62,7 +62,7 @@
     margin: 0 0 0 6%;
     background: url('../img/icon-instagram.svg') no-repeat center center / 100% 100%;
     outline: 0;
-    @include hover;
+    @include hover; /* stylelint-disable-line order/order */
   }
 
   &__nav-toggle {
@@ -72,7 +72,7 @@
     border: none;
     background: url('../img/icon-mobile-menu.svg') no-repeat center center / 100% 100%;
     cursor: pointer;
-    @include hover;
+    @include hover; /* stylelint-disable-line order/order */
   }
 }
 
